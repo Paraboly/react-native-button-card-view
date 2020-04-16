@@ -1,4 +1,4 @@
-<img alt="React Native button Card View" src="assets/logo.png" width="1050"/>
+<img alt="React Native Button Card View" src="assets/logo.png" width="1050"/>
 
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/Paraboly/react-native-map-card-view)
 
@@ -10,12 +10,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
 
+<p align="center">
+  <img alt="React Native Map Card View"
+    src="assets/Screenshots/example_screenshot.png" width="49%" />
+</p>
+
 # Installation
 
 Add the dependency:
 
 ```ruby
-npm i @paraboly/react-native-map-card-view
+npm i @paraboly/react-native-button-card-view
 ```
 
 ## Peer Dependencies
@@ -80,7 +85,6 @@ To fill the list data. You **HAVE TO** use this format:
 | title                 |     string     |        Testimonial        | change the title                                                                  |
 | data                  |     array      | dummyData(check the code) | set your own data array however you **HAVE TO** fill the array with above format! |
 | styles                |     style      |          default          | change the container's style                                                      |
-| style                 |
 | titleStyle            |     style      |          default          | change the title's style                                                          |
 | shadowStyle           |     style      |          default          | change the shadow's style                                                         |
 | shadowColor           |     string     |           #ccc            | change the shadow color                                                           |
@@ -90,7 +94,6 @@ To fill the list data. You **HAVE TO** use this format:
 | colors                |     array      |          colors           | change the background color of text avatar                                        |
 | size                  |     string     |           "30"            | change the size of avatar(image)'s size                                           |
 | listHeight            | number, string |            85             | change list height                                                                |
-| dynamically           |
 | primaryButtonText     |     string     |                           | change the button names                                                           |
 | primaryImage          |     image      |          default          | change image in button                                                            |
 | buttonContainerStyles |     style      |          default          | change the button container style                                                 |

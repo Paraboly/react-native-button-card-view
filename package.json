@@ -14,9 +14,9 @@
     "rn"
   ],
   "homepage": "https://www.paraboly.com",
-  "bugs": "https://github.com/Paraboly/react-native-map-card-view/issues",
-  "main": "./lib/src/MapCardView.js",
-  "repository": "git@github.com:Paraboly/react-native-map-card-view.git",
+  "bugs": "https://github.com/Paraboly/react-native-button-card-view/issues",
+  "main": "./lib/src/ButtonCardView.js",
+  "repository": "git@github.com:Paraboly/react-native-button-card-view.git",
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
