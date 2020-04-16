@@ -1,5 +1,3 @@
-<img alt="React Native Button Card View" src="assets/logo.png" width="1050"/>
-
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/Paraboly/react-native-map-card-view)
 
 [![Map based list card view for React Native via Paraboly.](https://img.shields.io/badge/-Map%20based%20list%20card%20view%20for%20React%20Native%20via%20Paraboly.-lightgrey?style=for-the-badge)](https://github.com/Paraboly/react-native-map-card-view)
