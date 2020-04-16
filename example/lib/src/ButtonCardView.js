@@ -15,7 +15,7 @@ import _styles, {
   _shadowStyle,
   _container,
   _listStyle,
-} from "./MapCardView.style";
+} from "./ButtonCardView.style";
 
 const { width: ScreenWidth, height: ScreenHeight } = Dimensions.get("window");
 
@@ -32,7 +32,7 @@ const INITIAL_REGION = {
   longitudeDelta: LONGITUDE_DELTA,
 };
 
-const MapCardView = (props) => {
+const ButtonCardView = (props) => {
   const {
     data,
     width,
@@ -121,7 +121,7 @@ const MapCardView = (props) => {
   );
 };
 
-MapCardView.propTypes = {
+ButtonCardView.propTypes = {
   title: PropTypes.string,
   shadowColor: PropTypes.string,
   borderColor: PropTypes.string,
@@ -132,7 +132,7 @@ MapCardView.propTypes = {
   listHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MapCardView.defaultProps = {
+ButtonCardView.defaultProps = {
   height: 150,
   listHeight: 85,
   shadowColor: "#ccc",
@@ -146,4 +146,4 @@ MapCardView.defaultProps = {
   mapInitialRegion: INITIAL_REGION,
 };
 
-export default MapCardView;
+export default ButtonCardView;

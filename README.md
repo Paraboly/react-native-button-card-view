@@ -1,4 +1,4 @@
-<img alt="React Native Map Card View" src="assets/logo.png" width="1050"/>
+<img alt="React Native button Card View" src="assets/logo.png" width="1050"/>
 
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/Paraboly/react-native-map-card-view)
 
@@ -9,13 +9,6 @@
 ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
-
-<p align="center">
-  <img alt="React Native Map Card View"
-        src="assets/Screenshots/example.png" width="49%" />
-  <img alt="React Native Map Card View"
-        src="assets/Screenshots/example2.png" width="49%" />
-</p>
 
 # Installation
 
@@ -32,7 +25,6 @@ npm i @paraboly/react-native-map-card-view
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
-"react-native-maps": ">= 0.26.1",
 "react-native-androw": ">= 0.0.34",
 "react-native-user-avatar": ">= 1.0.4",
 "@freakycoder/react-native-helpers": "^0.1.0"
@@ -43,7 +35,7 @@ npm i @paraboly/react-native-map-card-view
 ## Import
 
 ```jsx
-import MapCardView from "@paraboly/react-native-map-card-view";
+import ButtonCardView from "@paraboly/react-native-button-card-view";
 ```
 
 ## Usage (IMPORTANT! READ IT BEFORE USE)
@@ -66,36 +58,43 @@ To fill the list data. You **HAVE TO** use this format:
 ```
 
 ```jsx
-<MapCardView
-  data={data}
-  title="Testimonial"
+<ButtonCardView
+  data={dummyData}
+  title="Hello"
   colors={["red", "black", "gray"]}
+  primaryButtonText="Haritaya Git"
+  secondaryButtonText="Yol Tarifi"
+  primaryImage={require("example/assets/Map.png")}
+  secondaryImage={require("example/assets/Route.png")}
+  onPressPrimary={() => console.log("primary button")}
+  onPressSeconday={() => console.log("secondary button")}
 />
 ```
 
 # Configuration - Props
 
-| Property         |      Type      |          Default          | Description                                                                       |
-| ---------------- | :------------: | :-----------------------: | --------------------------------------------------------------------------------- |
-| width            | number, string |    ScreenWidth \* 0.9     | change the width of the card view                                                 |
-| height           | number, string |            150            | change the height of the card view                                                |
-| title            |     string     |        Testimonial        | change the title                                                                  |
-| data             |     array      | dummyData(check the code) | set your own data array however you **HAVE TO** fill the array with above format! |
-| markers          |    <Marker>    |      default marker       | set your own Marker JSX Object                                                    |
-| styles           |     style      |          default          | change the container's style                                                      |
-| mapStyle         |     style      |          default          | change the map's style                                                            |
-| titleStyle       |     style      |          default          | change the title's style                                                          |
-| shadowStyle      |     style      |          default          | change the shadow's style                                                         |
-| shadowColor      |     string     |           #ccc            | change the shadow color                                                           |
-| borderColor      |     string     |          #f54242          | change the border color                                                           |
-| backgroundColor  |     string     |           #fff            | change the background color                                                       |
-| borderLeftWidth  |     number     |             5             | change the left sided border width                                                |
-| markerLat        |     number     |         37.78825          | change the default marker latitude                                                |
-| markerLng        |     number     |         -122.4324         | change the default marker longitude                                               |
-| mapInitialRegion |    lat,lng     |      INITIAL_REGION       | change the map initial region                                                     |
-| colors           |     array      |          colors           | change the background color of text avatar                                        |
-| size             |     string     |           "30"            | change the size of avatar(image)'s size                                           |
-| listHeight       | number, string |            85             | change list height dynamically                                                    |
+| Property              |      Type      |          Default          | Description                                                                       |
+| --------------------- | :------------: | :-----------------------: | --------------------------------------------------------------------------------- |
+| width                 | number, string |    ScreenWidth \* 0.9     | change the width of the card view                                                 |
+| height                | number, string |            150            | change the height of the card view                                                |
+| title                 |     string     |        Testimonial        | change the title                                                                  |
+| data                  |     array      | dummyData(check the code) | set your own data array however you **HAVE TO** fill the array with above format! |
+| styles                |     style      |          default          | change the container's style                                                      |
+| style                 |
+| titleStyle            |     style      |          default          | change the title's style                                                          |
+| shadowStyle           |     style      |          default          | change the shadow's style                                                         |
+| shadowColor           |     string     |           #ccc            | change the shadow color                                                           |
+| borderColor           |     string     |          #f54242          | change the border color                                                           |
+| backgroundColor       |     string     |           #fff            | change the background color                                                       |
+| borderLeftWidth       |     number     |             5             | change the left sided border width                                                |
+| colors                |     array      |          colors           | change the background color of text avatar                                        |
+| size                  |     string     |           "30"            | change the size of avatar(image)'s size                                           |
+| listHeight            | number, string |            85             | change list height                                                                |
+| dynamically           |
+| primaryButtonText     |     string     |                           | change the button names                                                           |
+| primaryImage          |     image      |          default          | change image in button                                                            |
+| buttonContainerStyles |     style      |          default          | change the button container style                                                 |
+| buttonStyles          |     style      |          default          | change the button style                                                           |
 
 ## Future Plans
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StatusBar, SafeAreaView } from "react-native";
-import MapCardView from "./lib/src/MapCardView";
+import ButtonCardView from "@paraboly/react-native-button-card-view";
 
 const dummyData = [
   {
@@ -21,7 +21,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <View style={{ marginTop: 32 }}>
-          <MapCardView
+          <ButtonCardView
             data={dummyData}
             title="Hello"
             colors={["red", "black", "gray"]}
@@ -29,8 +29,8 @@ const App = () => {
             secondaryButtonText="Yol Tarifi"
             primaryImage={require("example/assets/Map.png")}
             secondaryImage={require("example/assets/Route.png")}
-            onPressPrimary={() => console.log("primary")}
-            onPressSeconday={() => console.log("secondary")}
+            onPressPrimary={() => console.log("primary button")}
+            onPressSeconday={() => console.log("secondary button")}
           />
         </View>
       </SafeAreaView>
