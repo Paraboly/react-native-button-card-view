@@ -15,7 +15,7 @@ import _styles, {
   _shadowStyle,
   _container,
   _listStyle,
-} from "./MapCardView.style";
+} from "./ButtonCardView.style";
 
 const { width: ScreenWidth, height: ScreenHeight } = Dimensions.get("window");
 
@@ -32,7 +32,7 @@ const INITIAL_REGION = {
   longitudeDelta: LONGITUDE_DELTA,
 };
 
-const MapCardView = (props) => {
+const ButtonCardView = (props) => {
   const {
     data,
     width,
@@ -48,9 +48,13 @@ const MapCardView = (props) => {
     backgroundColor,
     buttonContainerStyles,
     buttonsTextStyles,
-    buttonData,
-    onPressButton,
     buttonStyles,
+    primaryButtonText,
+    secondaryButtonText,
+    onPressPrimary,
+    onPressSeconday,
+    primaryImage,
+    secondaryImage,
   } = props;
 
   renderListItem = (list, index) => {
@@ -62,28 +66,18 @@ const MapCardView = (props) => {
     );
   };
 
-  renderButton = (item) => {
+  renderButton = (text, onPress, imageSource) => {
     return (
-      <Androw
-        style={{
-          shadowRadius: 3.5,
-          shadowOpacity: 0.35,
-          shadowColor: "#757575",
-          shadowOffset: {
-            width: 0,
-            height: 3,
-          },
-        }}
-      >
+      <Androw style={_styles.androwStyles}>
         <TouchableOpacity
           style={buttonStyles || _styles.buttonStyles}
-          onPress={item.onPress}
+          onPress={onPress}
         >
           <Text style={buttonsTextStyles || _styles.buttonsTextStyles}>
-            {item.text}
+            {text}
           </Text>
 
-          <Image source={item.source} style={_styles.iconStyle} />
+          <Image source={imageSource} style={_styles.iconStyle} />
         </TouchableOpacity>
       </Androw>
     );
@@ -115,14 +109,19 @@ const MapCardView = (props) => {
           </View>
         </View>
         <View style={buttonContainerStyles || _styles.buttonContainerStyles}>
-          {buttonData.map((item) => this.renderButton(item))}
+          {this.renderButton(primaryButtonText, onPressPrimary, primaryImage)}
+          {this.renderButton(
+            secondaryButtonText,
+            onPressSeconday,
+            secondaryImage
+          )}
         </View>
       </View>
     </Androw>
   );
 };
 
-MapCardView.propTypes = {
+ButtonCardView.propTypes = {
   title: PropTypes.string,
   shadowColor: PropTypes.string,
   borderColor: PropTypes.string,
@@ -133,7 +132,7 @@ MapCardView.propTypes = {
   listHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MapCardView.defaultProps = {
+ButtonCardView.defaultProps = {
   height: 150,
   listHeight: 85,
   shadowColor: "#ccc",
@@ -147,4 +146,4 @@ MapCardView.defaultProps = {
   mapInitialRegion: INITIAL_REGION,
 };
 
-export default MapCardView;
+export default ButtonCardView;
